@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+    text-transform: uppercase;
+    font-size: 1.1em;
+    color: #fff;
+}
+
+body {
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+}
+
+header, footer {
+    width: 100%;
+    padding: 0.5%;
+}
+
+.header {
+    background-color: rgb(228, 47, 15);
+}
+
+.footer {
+    background-color: rgb(166, 88, 185);
+}
+
+.section-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*szerokosci na auto w rodzicach/ wysokosci nie ustawiamy/
+w @media mozemy ustawiac wysokosc w px i szerokosc elementu na stronie w % */
+
+.aside-left-flex {
+    background-color: darkgreen;
+    width: 20%;
+}
+
+.article-flex {
+    background-color: rgb(48, 129, 204);
+    width: 60%;
+}
+
+.aside-right-flex {
+    background-color: pink;
+    width: 20%;
+}
+
+@media screen and (max-width: 992px) {
+    .aside-left-flex{
+        width: 100%;
+        order: 3;
+    }
+    .article-flex{
+        width: 70%;
+    }
+    .aside-right-flex{
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .aside-left-flex{
+        width: 100%;
+        order: 2;
+    }
+    .article-flex{
+        width: 100%;
+    }
+    .aside-right-flex{
+        width: 100%;
+        order: 3;
+    }
+}
